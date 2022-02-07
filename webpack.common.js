@@ -3,19 +3,6 @@ const { ProvidePlugin } = require('webpack')
 const HtmlWebpackPlugin = require('html-webpack-plugin')
 
 module.exports = {
-  mode: 'development',
-  devServer: {
-    static: path.join(__dirname, 'dist'),
-    compress: true,
-    port: 3000,
-    hot: true,
-    open: true,
-    watchFiles: ['src/**/*'],
-  },
-  watch: true,
-  watchOptions: {
-    ignored: '**/node_modules',
-  },
   entry: path.join(__dirname, 'src', 'index.js'),
   output: {
     path: path.resolve(__dirname, 'dist'),
