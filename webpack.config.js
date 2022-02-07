@@ -35,8 +35,12 @@ module.exports = {
         use: ['style-loader', 'css-loader', 'sass-loader'],
       },
       {
-        test: /\.(svg|png|webp|woff|woff2|ttf|eot)$/,
+        test: /\.(png|webp|woff|woff2|ttf|eot)$/,
         use: 'file-loader',
+      },
+      {
+        test: /\.svg$/i,
+        use: ['@svgr/webpack'],
       },
       {
         test: /\.html$/,
@@ -51,6 +55,7 @@ module.exports = {
   plugins: [
     new HtmlWebpackPlugin({
       template: path.join(__dirname, 'src', 'index.html'),
+      favicon: path.join(__dirname, 'src', 'favicon.webp'),
     }),
     new ProvidePlugin({
       React: 'react',
