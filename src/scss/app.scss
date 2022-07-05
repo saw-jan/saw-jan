@@ -1,11 +1,11 @@
-@import "colors";
-@import "fonts";
-@import "animations";
+@import 'colors';
+@import 'fonts';
+@import 'animations';
 
 body {
   margin: 0;
   padding: 0;
-  font-family: "Raleway";
+  font-family: 'Raleway';
   background: $light;
   color: $dark;
   user-select: none;
@@ -84,7 +84,7 @@ body {
           visibility: hidden;
 
           &:after {
-            content: " ";
+            content: ' ';
             position: absolute;
             bottom: -10px;
             left: 45%;
@@ -140,4 +140,4 @@ body {
 }
 
 // breakpoints
-@import "responsive";
+@import 'responsive';
