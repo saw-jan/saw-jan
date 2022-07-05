@@ -4,7 +4,7 @@
   "description": "Static portfolio website",
   "scripts": {
     "start": "webpack serve --config webpack.dev.js",
-    "build": "webpack --config webpack.prod.js",
+    "build": "webpack --config webpack.prod.js && node cname.js",
     "deploy": "gh-pages -d dist -b deploy"
   },
   "repository": "git@github.com:saw-jan/saw-jan.git",
