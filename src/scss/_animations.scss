@@ -6,3 +6,12 @@
     opacity: 1;
   }
 }
+
+@keyframes slide {
+  0% {
+    width: 0;
+  }
+  100% {
+    width: 50px;
+  }
+}
