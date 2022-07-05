@@ -25,15 +25,6 @@ jobs:
       - name: build
         run: yarn build
 
-      - name: import-gpg
-        if: ${{ success() && github.event_name == 'push' && github.ref == 'refs/heads/master' }}
-        uses: crazy-max/ghaction-import-gpg@v5
-        with:
-          gpg_private_key: ${{ secrets.GPG_PRIVATE_KEY }}
-          passphrase: ${{ secrets.PASSPHRASE }}
-          git_user_signingkey: true
-          git_commit_gpgsign: true
-
       - name: deploy
         if: ${{ success() && github.event_name == 'push' && github.ref == 'refs/heads/master' }}
         uses: crazy-max/ghaction-github-pages@v3
