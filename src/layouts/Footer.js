@@ -7,11 +7,6 @@ const Footer = () => {
       <div id="links">
         <Profile />
       </div>
-      <div id="contributor">
-        <a href="https://owncloud.com/">
-          <img src={badge} draggable="false" width="200" />
-        </a>
-      </div>
     </div>
   )
 }

@@ -97,7 +97,7 @@ body {
 
         .active {
           position: relative;
-          background: colors.$active;
+          background: colors.$dark;
           width: 50px;
           height: 5px;
           border-radius: 10px;
@@ -111,13 +111,13 @@ body {
           box-sizing: border-box;
           padding: 10px;
           margin: 10px;
-          fill: colors.$gray;
+          fill: colors.$dark;
           cursor: pointer;
         }
 
         &:hover {
           svg {
-            fill: colors.$dark;
+            fill: colors.$active;
           }
 
           .tooltip {
