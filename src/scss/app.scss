@@ -1,13 +1,14 @@
-@import 'colors';
-@import 'fonts';
-@import 'animations';
+@use "sass:meta";
+@use 'colors';
+@use 'fonts';
+@use 'animations';
 
 body {
   margin: 0;
   padding: 0;
   font-family: 'Raleway';
-  background: $light;
-  color: $dark;
+  background: colors.$light;
+  color: colors.$dark;
   user-select: none;
 }
 
@@ -76,8 +77,8 @@ body {
 
         .tooltip {
           position: relative;
-          background: $dark;
-          color: $light;
+          background: colors.$dark;
+          color: colors.$light;
           padding: 5px 8px;
           border-radius: 5px;
           font-size: 14px;
@@ -90,13 +91,13 @@ body {
             left: 45%;
             border-width: 5px;
             border-style: solid;
-            border-color: $dark transparent transparent transparent;
+            border-color: colors.$dark transparent transparent transparent;
           }
         }
 
         .active {
           position: relative;
-          background: $active;
+          background: colors.$active;
           width: 50px;
           height: 5px;
           border-radius: 10px;
@@ -110,13 +111,13 @@ body {
           box-sizing: border-box;
           padding: 10px;
           margin: 10px;
-          fill: $gray;
+          fill: colors.$gray;
           cursor: pointer;
         }
 
         &:hover {
           svg {
-            fill: $dark;
+            fill: colors.$dark;
           }
 
           .tooltip {
@@ -140,4 +141,4 @@ body {
 }
 
 // breakpoints
-@import 'responsive';
+@include meta.load-css('responsive');

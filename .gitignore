@@ -1,3 +1,9 @@
 dist
 node_modules
 .vscode
+
+# yarn
+.pnp.*
+.yarn/*
+!.yarn/releases/
+!.yarn/plugins/
