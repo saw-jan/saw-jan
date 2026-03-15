@@ -9,7 +9,7 @@ const Main = () => {
       <div id="details">
         <span id="lname">GURUNG</span>
         <span id="fname">SAWJAN</span>
-        <span id="role">Developer - QA Engineer</span>
+        <span id="role">SWE / QA Engineer</span>
       </div>
     </div>
   )
