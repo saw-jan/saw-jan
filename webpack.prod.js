@@ -1,11 +1,20 @@
 const { merge } = require('webpack-merge')
 const common = require('./webpack.common.js')
-const CssMinimizerPlugin = require('css-minimizer-webpack-plugin')
-const MinifyJsPlugin = require('terser-webpack-plugin')
+const MinifyPlugin = require('terser-webpack-plugin')
 
 module.exports = merge(common, {
   mode: 'production',
   optimization: {
-    minimizer: [new MinifyJsPlugin(), new CssMinimizerPlugin()],
+    minimize: true,
+    minimizer: [
+      new MinifyPlugin({
+        test: /\.(?:[cm]?js|css|html?)(\?.*)?$/i,
+        minify: [
+          MinifyPlugin.terserMinify,
+          MinifyPlugin.cssoMinify,
+          MinifyPlugin.htmlMinifierTerser,
+        ]
+      }),
+    ],
   },
 })
