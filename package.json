@@ -10,7 +10,7 @@
   "repository": "git@github.com:saw-jan/saw-jan.git",
   "author": "Sawjan G. <saw.jan.grg3e@gmail.com>",
   "license": "MIT",
-  "packageManager": "yarn@4.13.0",
+  "packageManager": "yarn@4.18.0",
   "devDependencies": {
     "@babel/core": "^7.29.6",
     "@babel/preset-env": "^7.29.0",
